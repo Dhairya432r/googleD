@@ -64,6 +64,9 @@ mongoose.connect('mongodb+srv://Dhairya:Dhairya432r@cluster0.kad7z2w.mongodb.net
 
 app.use(cors());
 app.use(express.json());
+app.get("/",(req,res) =>{
+    res.json("Hello");
+}
 
 app.post('/api/user', async (req, res) => {
     const { name, email, picture } = req.body;
